@@ -1,0 +1,7 @@
+<h1>PHOTOS</h1>
+<ul>
+    <%= for snap <- snaps, do: "<li>Photo: #{snap}</li>" %>
+</ul>
+<h1>Coordinates</h1>
+<p>Latitude: <%= coords.lat %></p>
+<p>Longitude: <%= coords.lng %></p>

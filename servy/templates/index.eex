@@ -1,0 +1,3 @@
+<ul>
+<%= for language <- languages, do: "<li>Language is #{language.name} and its type is #{language.type}" %>
+</ul>

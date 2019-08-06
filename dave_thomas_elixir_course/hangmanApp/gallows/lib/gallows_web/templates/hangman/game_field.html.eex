@@ -1,0 +1,8 @@
+<h1>Your Hangman Game</h1>
+<h2>Turns left: <%= @tally.turn_left() %></h2>
+<h2>The word so far: <%= @tally.letters |> reveal_letters %></h2>
+<h2>Used letters: <%= @tally.used_letters |> Enum.join(",") %></h2>
+<%= form_for(@conn, Routes.hangman_path(@conn, :request_move), [ as: :request_move, method: :put], fn f -> %>
+    <%= text_input(f, :guess)%>
+    <%= submit("Next Move") %>
+<% end) %>
